@@ -6,19 +6,17 @@ import Vueupdateprice from '../../components/detailsPage/VueUpdatePrice';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import ApiCall from '../../components/api/ApiCall';
 
 
 function Details() {
     const [product, setProduct] = useState([]);
 
-
     useEffect(() => {
-        fetch('https://fakestoreapi.com/products/' + window.location.pathname.split("/")[2])
-            .then(response => response.json())
+            ApiCall()
             .then(data => setProduct(data))
 
     }, [])
-
 
         return (
             <><div className="nav-bar">
@@ -45,25 +43,15 @@ function Details() {
                 <div className='products-details__price'>
                     <Vueupdateprice />
                 </div>
-
-
-
+                
                 <div className='divclass'>
                     <img src={product.image} alt="product" id='img-details' />
                 </div>
                 
                 <div className='arrow'>
-                <Link to={"/"}><img src="https://img.icons8.com/ios-filled/50/null/long-arrow-left.png"/></Link>
+                <Link to={"/"}><img src="https://img.icons8.com/ios-filled/50/null/long-arrow-left.png" alt='arrow'/></Link>          
                 </div>
-
-
             </div></>
-
         )
-
-
     }
-
-
-
 export default Details;

@@ -1,16 +1,18 @@
 import React, {useEffect} from "react";
+import { useState } from "react";
+import ApiCall from "../api/ApiCall";
 
 function TvaPrice({ priceChange }) {
 
-    const [product, setProduct] = React.useState([]);
+    const [product, setProduct] = useState([]);
 
+    // Fetching the product data from the API
     useEffect(() => {
-        fetch('https://fakestoreapi.com/products/' + window.location.pathname.split("/")[2])
-            .then(response => response.json())
+        ApiCall()
             .then(data => setProduct(data))
-
     }, [])
-
+    
+    // if the priceChange is equal to 0, we display the price of the product
     if (priceChange === 0) {
     
     return (
