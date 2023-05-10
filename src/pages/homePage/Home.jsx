@@ -1,12 +1,10 @@
 import React from 'react';
-import Barleft from '../Menu';
-import ProductListTable from './ProductListTable';
+import Barleft from '../../components/Menu';
+import ProductListTable from '../../components/homePage/ProductListTable';
 
 
-class Home extends React.Component {
+function Home() {
 
-
-  render() {
     return (
         
         <><div className="nav-bar">
@@ -36,6 +34,5 @@ class Home extends React.Component {
       
     );
   }
-}
 
 export default Home;

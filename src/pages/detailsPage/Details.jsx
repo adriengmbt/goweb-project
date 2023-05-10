@@ -1,32 +1,25 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { Component } from 'react';
+import React, {} from 'react';
 import './Details.scss';
-import Barleft from '../Menu';
-import './Uptadeprice';
-import Vueupdateprice from './Vueupdateprice';
+import Barleft from '../../components/Menu';
+import Vueupdateprice from '../../components/detailsPage/VueUpdatePrice';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 
-class Details extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            product: [],
-            id : window.location.pathname.split("/")[2],
-            prix : null,
-        }
-    }
+function Details() {
+    const [product, setProduct] = useState([]);
 
-    componentDidMount() {
-        fetch('https://fakestoreapi.com/products/' + this.state.id )
+
+    useEffect(() => {
+        fetch('https://fakestoreapi.com/products/' + window.location.pathname.split("/")[2])
             .then(response => response.json())
-            .then(data => this.setState({ product: data }))
-    }
+            .then(data => setProduct(data))
 
-  
+    }, [])
 
 
-    render() {
         return (
             <><div className="nav-bar">
                 <Barleft />
@@ -35,18 +28,18 @@ class Details extends Component {
             <div className="products-details">
 
                 <div className='products-details__title'>
-                    <h1>{this.state.product.title}</h1>
+                    <h1>{product.title}</h1>
                 </div>
 
                 <div className='products-details__description-and-category'>
                     <div className='products-details__description'>
                         <h3 id='products-details__description__h3' >Description</h3>
-                        <p id='products-details__description__p' >{this.state.product.description}</p>
+                        <p id='products-details__description__p' >{product.description}</p>
                     </div>
         
                     <div className='products-details__category'> 
                         <h3 id='products-details__category__h3' >Category</h3>
-                        <p id='products-details__category__p'>{this.state.product.category}</p>
+                        <p id='products-details__category__p'>{product.category}</p>
                     </div>
                 </div>
                 <div className='products-details__price'>
@@ -56,12 +49,13 @@ class Details extends Component {
 
 
                 <div className='divclass'>
-                    <img src={this.state.product.image} alt="product" id='img-details' />
+                    <img src={product.image} alt="product" id='img-details' />
                 </div>
                 
                 <div className='arrow'>
                 <Link to={"/"}><img src="https://img.icons8.com/ios-filled/50/null/long-arrow-left.png"/></Link>
                 </div>
+
 
             </div></>
 
@@ -69,12 +63,6 @@ class Details extends Component {
 
 
     }
-
-
-                
-
-}
-
 
 
 

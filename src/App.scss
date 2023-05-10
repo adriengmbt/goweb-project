@@ -1,5 +1,6 @@
 html {
   background-color: #fffff0;
+  width: 100%;
 
 }
 
@@ -16,10 +17,10 @@ img[alt='logo'] {
   color: white;
   padding-bottom: 10px;
   
-  .nav-bar__container {
+  &__container {
     display: grid;
 
-    .nav-bar__container__name {
+    &__name {
       display: flex;
       font-size: 20px;
       font-weight: bold;
@@ -151,9 +152,6 @@ img[alt='logo'] {
   .nav-bar {
 
     .nav-bar__container  {
-      display: grid ;
-      grid-template-rows: auto auto ;
-      grid-template-areas: "name" "ul";
 
       .nav-bar__container__header {
         display: flex;

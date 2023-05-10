@@ -1,8 +1,7 @@
 import React from 'react';
-import image from './icons8-cercle-64.png'
+import image from '../assets/images/icons8-cercle-64.png';
 
-class Menu extends React.Component {
-  render() {
+function Menu() {
     return (
       <div className="nav-bar__container">
 
@@ -31,6 +30,6 @@ class Menu extends React.Component {
       </div>
     );
   }
-}
+
 
 export default Menu;

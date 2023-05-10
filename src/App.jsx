@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.scss';
 
-import Home from './components/HomePage/Home';
+import Home from './pages/homePage/Home';
 import {  Route, Routes } from 'react-router-dom';
-import Details from './components/DetailsPage/Details';
+import Details from './pages/detailsPage/Details';
 
 
 function App() {
