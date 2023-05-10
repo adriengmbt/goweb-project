@@ -72,6 +72,7 @@
                 text-align: end;
                 padding-left: 10px;
             }
+            
             .button {
                 display: flex;
                 justify-content: center;
@@ -82,10 +83,17 @@
                 width: 100%;
                 height: 40px;
                 font-size: 15px;
-                font-weight: bold;
+                cursor: pointer;
+                border: none;
 
                 &--disabled {
                     background-color: gray;
+                    color: white;
+                    cursor: not-allowed;
+                    border-radius: 4px;
+                    width: 100%;
+                    height: 40px;
+                    font-size: 15px;   
                 }
 
                 &:hover {
@@ -267,6 +275,10 @@
                     grid-template-columns: 1fr 3fr;
                     .button {
                          width: 140px;
+
+                         &--disabled {
+                            width: 140px;
+                         }
                     }
 
                     .tva-update {
