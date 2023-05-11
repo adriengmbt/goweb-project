@@ -1,5 +1,6 @@
 import React from 'react';
 import image from '../assets/images/icons8-cercle-64.png';
+import SearchBar from './homePage/Search/SearchBar';
 
 function Menu() {
     return (
@@ -13,6 +14,7 @@ function Menu() {
 
           <div className="nav-bar__container__name">
             <h2>Circle Products</h2>
+          <SearchBar />
           </div>
 
         </div>
