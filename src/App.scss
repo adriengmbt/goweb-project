@@ -166,6 +166,9 @@ img[alt='logo'] {
   }
 
   .nav-bar {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    flex-direction: column;
 
     .nav-bar__container  {
 
@@ -173,9 +176,8 @@ img[alt='logo'] {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        padding: 5px;
+        margin-top: 50px;
+        padding: 50px;
         align-items: flex-start;
 
         .nav-bar__container__name {
@@ -217,11 +219,17 @@ img[alt='logo'] {
 
 
         .products-management {
+          grid-area: 1 / 2 / 2 / 3;
           display: flex;
           flex-direction: column;
           align-items: center;
           height: 100%;
-          justify-content: space-between;          
+          justify-content: space-between; 
+          padding:0 20px 0;   
+          #TVA{
+            display: flex;
+            justify-content: flex-end;
+          }    
           
           table {
             display: table;
@@ -266,9 +274,20 @@ img[alt='logo'] {
               padding: 25px;
               border: 0;
             }
-          }  
+          } 
+          .products-management__price-tva {
+            display: flex;
+            justify-content: flex-end;
+          } 
         }
       }
+
+      .products-management__filter {
+        grid-area: 1 / 1 / 2 / 2;
+        height: 10%;
+
+      }
+
 
 
 
