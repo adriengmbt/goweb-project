@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Barleft from "../../components/Menu";
 import ProductListTable from "../../components/homePage/ProductListTable";
-import Pagination from "../homePage/Pagination";
+import Pagination from "../../components/homePage/Pagination";
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -47,6 +47,7 @@ function Home() {
           <ProductListTable products={currentProducts} />
             </tbody>
         </table>
+       
         <div className="pagination">
             <Pagination totalPagesNum={nPages} currentPage={currentPage} setCurrentPage={setCurrentPage} />      
         </div>

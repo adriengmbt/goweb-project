@@ -1,6 +1,8 @@
 html {
   background-color: #fffff0;
   width: 100%;
+  display: grid;
+
 
 }
 
@@ -26,7 +28,15 @@ img[alt='logo'] {
       font-weight: bold;
       text-align: left;
       border-bottom: 1px solid white;
-      justify-content: center;
+      align-items: center;
+      justify-content: space-around;
+
+      h2 {
+        margin-left: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        transition: all 0.3s ease-in-out;
+      }
     }
     ul {
       display: grid;
@@ -58,6 +68,7 @@ img[alt='logo'] {
 .products-management {
   color: black;
 
+
   thead th{
     display: none;
   }
@@ -79,10 +90,13 @@ img[alt='logo'] {
     justify-content: center;
   }
   
+
   
 
   table, thead, tbody, tr, td, th {
     display: block;
+
+
     
     .products-management__table {
       border-collapse: collapse;
@@ -113,6 +127,8 @@ img[alt='logo'] {
       }
     tr {
       margin-bottom: 1rem;
+      
+
       
       td:nth-child(odd) {
         background-color: white;
@@ -160,6 +176,7 @@ img[alt='logo'] {
         margin-top: 30px;
         margin-bottom: 30px;
         padding: 5px;
+        align-items: flex-start;
 
         .nav-bar__container__name {
           display: flex;
@@ -171,11 +188,12 @@ img[alt='logo'] {
           font-size: 15px;
           h2 {
             margin: 0; 
+            margin-bottom: 30px;
           }
         }
     }
     .nav-bar__container__menu{
-      padding-top: 40px;
+      padding-top: 20px;
       ul {
         display: flex;
         flex-direction: column;
