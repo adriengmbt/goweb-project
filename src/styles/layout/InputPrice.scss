@@ -1,0 +1,27 @@
+.price-content {
+    display: grid;
+    
+    &__input{
+        grid-area: 1/1;
+        background-color:$white;
+        border: 0.13rem solid $main-color;
+        border-radius: 0.3rem;
+        padding: $s-pd;
+        font-size: $xs-sz;
+        width: 10rem;
+        @include tablet {
+            width: 9rem;
+        }
+    }
+    &__symbol {
+        grid-area: 1/1;
+        font-size: $xs-sz;
+        padding: $s-pd;
+        margin-left: 8rem;
+        @include tablet {
+            margin-left: 6.5rem;
+        }
+    }
+}
+
+  

@@ -1,0 +1,26 @@
+.button {
+    @include flex-column;
+    align-items: center;
+    background-color: $main-color;
+    color: $white;
+    border-radius: $xs-rad;
+    width: 100%;
+    height: 2.5rem;
+    font-size: $s-sz;
+    cursor: $pointer;
+    border: none;
+
+    @include tablet {
+        width: 8.5rem;
+
+    }
+
+    &--disabled {
+        background-color: gray;
+        cursor: not-allowed; 
+    }
+
+    &:hover {
+        background-color: $main-color;
+    }           
+}

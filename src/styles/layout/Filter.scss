@@ -1,0 +1,207 @@
+.filter {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    padding: $xxl-pd;
+    overflow-y: hidden;
+    @include flex-column;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.3);
+    transition: all 0.5s linear;
+    @include tablet {
+          max-width: 25rem;
+          height: 100%;
+          margin: 0;
+      }
+    &__open {
+      @include flex-column;
+      flex-direction: initial;
+      align-items: center;
+      font-weight: $bold;
+      background-color: $white;
+      box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease-in-out;
+    
+        &:active {
+            transform: scale(0.9);
+        }
+
+      }
+    &__close {
+        margin: 0;
+        padding: $xs-pd;
+        display: flex;
+        height: 25%;
+        justify-content: flex-end;
+    }
+
+    &__close-cross{
+      margin: 0;
+      font-size: $l-sz;
+      font-weight: $bold;
+      cursor: $pointer;
+  }
+
+    // filter category container
+  
+    &__category-container {
+      @include flex-column;
+      padding: $xs-pd;
+      position: relative;
+        height: 25%;
+    }
+
+    &__category-label {
+      font-size: $s-sz;
+      margin-bottom: $xxs-mg;
+      font-weight: $bold;
+  }
+
+  &__category-select{
+    border: none;
+    border-bottom: 0.2rem solid $main-color;
+    background-color: transparent;
+    outline:none;
+    margin:0;
+    display:block;
+    width: 100%;
+    padding: $s-pd 0 $s-pd;
+    font-size: $s-sz;
+    cursor: pointer;
+  }
+    // filter price range container
+
+    &__price-container {
+      display: grid;
+      align-items: center;
+      padding: $xs-pd;
+      height: 25%;
+    }      
+
+    &__price-span {
+        margin-bottom: $s-mg;
+        font-size: $s-sz;
+        font-weight: $bold;
+    }
+
+    &__price-title{
+      display: flex;
+      justify-content: space-between;
+      font-size: $xs-sz;
+      font-weight: $bold;
+      margin-bottom: $xxs-mg;
+            
+    }
+     
+    &__price-slider{
+        @include flex-column;
+        align-items: center;
+    }
+
+    &__price-slider-progress {
+      height: 0.3rem;
+      position: relative;
+      background: #ddd;
+      border-radius: $xs-rad;
+      margin-bottom: $xs-mg;
+      width: 90%;
+      top: 0.5rem;
+    }
+
+    &__price-slider-content {
+      height: 100%;
+      left: 0%;
+      right: 100%;
+      position: absolute;
+      border-radius: $xs-rad;
+      background: $main-color;        
+    }
+               
+    &__price-range {
+            position: relative;
+            width: 100%;
+            top: 0.5rem;
+    }
+      
+    &__price-range-input {
+      position: absolute;
+      width: 99%;
+      background: none;
+      pointer-events: none;
+      top: -1.4rem;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+
+    &__price-range-input[type="range"]::-webkit-slider-thumb {
+      height: 1.05rem;
+      width: 1.05rem;
+      border-radius: 50%;
+      background: $main-color;
+      pointer-events: auto;
+      -webkit-appearance: none;
+      box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+    }
+
+    &__price-order {
+      @include flex-column;
+      padding: $xs-pd;
+      position: relative;
+      height: 25%;
+    }
+
+    &__price-order-label {
+      font-size: $s-sz;
+      margin-bottom: $xxs-mg;
+      font-weight: $bold;
+    }
+    
+    &__price-order-select {
+    border: none;
+    border-bottom: 0.19rem solid $main-color;
+    background-color: transparent;
+    outline: none;
+    margin: 0;
+    display: block;
+    width: 100%;
+    padding: $s-pd 0 $s-pd;
+    font-size: $s-sz;
+    cursor: $pointer;
+    }
+
+    &__button-container {
+      display: flex;
+      justify-content: flex-end;
+      height: 50%;
+      flex-direction: column;
+      padding: $m-pd;
+      align-items: center;
+
+    }
+    &__button {
+      font-weight: $bold;
+      box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+        &:hover {
+          background-color: $main-color;
+        }
+    }
+
+    &__open-img {
+      width: 2.5rem;
+      height: 2.5rem;
+      padding: $xs-pd;
+      cursor: $pointer;
+      }
+
+    &__open-text{
+      cursor: $pointer;
+    }
+  } 

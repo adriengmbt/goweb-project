@@ -25,20 +25,14 @@ function InputPrice({ onInputChange, priceChange }) {
     }, [product])
 
   // if the priceChange is equal to 0, we display the placeholder of the product else we display the priceChange
-  if (priceChange === 0) {
     return (
-    <div >
-      <input aria-label="" className="static-prix" type="text"  value={inputValue} onChange={handleChange} />  
+    <div className="price-content" >
+      <input aria-label="input" className="price-content__input" type="text" placeholder={priceChange !== 0 ? String(priceChange) : ""}value={inputValue}onChange={handleChange}/>  
+      <span className="price-content__symbol">€</span> 
+
     </div>
   );
-}
-  else {
-    return (
-        <div>
-          <input className="static-prix" type="text" placeholder={priceChange} value={inputValue} onChange={handleChange} />    
-        </div>
-        );
-  }
+
 }
 
 export default InputPrice;

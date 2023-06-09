@@ -1,0 +1,71 @@
+// Defaults colors for the app
+$color-orange: orange;
+$color-green: green;
+$color-blue: blue;
+$color-pink: pink;
+$main-color: #564aff;
+$background-color: #FBFBFB;
+$white: #ffffff;
+$black: #000000;
+$gray: #3a3a3a;
+$font-color: #707070;
+$background-color-category-men: #ffa846;
+$background-color-category-jewelry: #32B436;
+
+// Font weight
+$normal: 500;
+$bolder: 700;
+$bold: 600;
+
+// Line height
+
+$s-lh: 1.2;
+$m-lh: 1.3;
+$l-lh: 1.5;
+
+// Font size
+
+$xs-sz: 0.75rem; // 12px
+$s-sz: 1rem; // 16px
+$m-sz: 1.25rem; // 20px
+$l-sz : 1.5rem; // 24px
+$xl-sz: 2.25rem; // 36px
+
+// Font family
+
+$roboto: 'Roboto', sans-serif;
+
+// padding
+
+$xxs-pd: 0.3rem; // 5px
+$xs-pd: 0.6rem; // 10px
+$s-pd: 1rem; // 16px
+$m-pd: 1.5rem; // 24px
+$l-pd: 2rem; // 32px
+$xl-pd: 2.5rem; // 40px
+$xxl-pd: 3rem; // 50px
+
+//margin 
+
+$xxs-mg: 0.3rem; // 5px
+$xs-mg: 0.6rem; // 10px
+$s-mg: 1rem; // 16px
+$m-mg: 1.5rem; // 24px
+$l-mg: 2rem; // 32px
+$xl-mg: 2.5rem; // 40px
+$xxl-mg: 5rem; // 80px
+// Radius
+
+$xs-rad: 0.3rem; // 5px
+$s-rad: 0.5rem; // 8px
+$m-rad: 0.6rem; // 10px
+$l-rad: 0.8rem; // 13px
+$xl-rad: 1rem; // 16px
+$xxl-rad: 1.5rem; // 24px
+
+$xxxl-rad: 6rem; // 96px
+$full-rad: 100%; // 100%
+
+// cursor
+
+$pointer: pointer;

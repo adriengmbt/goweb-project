@@ -1,0 +1,26 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap";
+
+
+@import "./utils/Breakpoint";
+@import "./utils/Palette";
+@import "./utils/Mixin";
+
+
+@import "./layout/Filter";
+@import "./layout/Pagination";
+@import "./layout/ProductItem";
+@import "./layout/SearchBar";
+@import "./layout/Navbar";
+@import "./layout/ProductListTable";
+@import "./layout/VueUpdatePrice.scss";
+@import "./layout/InputPrice";
+@import "./layout/ButtonPrice.scss";
+@import "./layout/TvaPrice.scss";
+
+
+@import "./pages/Home";
+@import "./pages/Details";
+@import "./pages/App";
+
+
+

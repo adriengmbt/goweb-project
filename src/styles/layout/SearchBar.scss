@@ -1,0 +1,75 @@
+.search-bar {
+    margin-right: $xs-mg;
+    margin-left: $xs-mg;
+    
+    &__container {
+        background-color: $white;
+        height: 3rem;
+        border-radius: 3rem;
+        padding: $m-pd $xs-pd;
+        display: flex;
+        align-items: center;
+        transition: 0.8s;
+        box-shadow: 0 0 1.6rem 0 rgba(0, 0, 0, 0.2);
+        flex-direction: row-reverse;
+        @include tablet {
+            margin-left: $m-mg;
+            margin-right: $xs-mg;
+        } 
+        @include big-tablet {
+            margin-right: $xxl-mg;
+        }
+    }
+        
+    &__input {
+        background: transparent;
+        border: none;
+        outline: none;
+        width: 0;
+        font-weight: $normal;
+        font-size: $s-sz;
+        transition: 0.8s;
+    }
+
+    &__icon{
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+    
+
+    &__result {
+        background-color: white;
+        position:absolute;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        margin-right: $xxs-mg;
+        margin-top: $xxs-mg;
+        border-radius: $m-rad;
+        width: max-content;
+        max-height: 25rem;
+        overflow-y: auto;
+        border: 0.06rem solid #564aff61;
+        @include tablet {
+            margin-left: $m-mg;
+            width: 12rem;
+            border: none;
+            
+        }
+    }
+
+    &__result-title {
+        font-size: $xs-sz;
+        padding: $xs-pd $xs-pd;
+        border-bottom: 0.06rem solid #564aff61;
+        text-decoration: none;
+        color: black;
+        transition: color 0.3s ease-in-out;
+        font-weight: $normal;
+        &:hover {
+            color: $main-color;
+        }
+    }
+}
+
+

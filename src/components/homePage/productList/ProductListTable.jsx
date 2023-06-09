@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./ProductItem.scss";
+import '../../../styles/Main.scss';
+
 function ProductListTable({ products }) {
   return (
     <>
@@ -8,22 +9,24 @@ function ProductListTable({ products }) {
 
 
           <React.Fragment key={i}>
-          <tr>
-            <td className="products-management__product name" data-label="Product name" key={i}>
-              <Link to={"/details/" + product.id}>
+          <tr className="products-management__table-tr">
+            <td className="products-management__table-td" data-label="Product name" key={i}>
+              <Link to={"/details/" + product.id} className="products-management__table-link">
                 {product.title.length > 30 ? product.title.slice(0, 24) + "..." : product.title}
               </Link>
             </td>
-            <td className="products-management__category" data-label="Category">
+            <td className="products-management__table-td" data-label="Category">
               <div className={product.category.slice(0, 3)}>
                  {product.category} 
                 </div>
             </td>
-            <td className="products-management__price" data-label="Price">
+            <td className="products-management__table-td" data-label="Price">
               {product.price}€
             </td>
-            <td className="products-management__price-tva" data-label="Price (TVA)">
+            <td className="products-management__table-td" data-label="Price (TVA)">
+              <div className="products-management__table-price-tva-label">
               {Math.round((product.price * 1.2)*100)/100}€
+              </div>
             </td>
           </tr>
 

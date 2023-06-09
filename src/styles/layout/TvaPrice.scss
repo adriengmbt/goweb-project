@@ -1,0 +1,16 @@
+.tva-price {
+    font-size: $xs-sz;
+    text-align: end;
+    padding-left: $xs-pd;
+    @include tablet {
+        font-size: $xs-sz;
+        grid-area: 2 / 1 / span 2 / span 2;
+        text-align: start;
+     } 
+     
+    @include desktop {
+         grid-area: 1 / 2 / span 2 / span 2;
+        padding-right: $xxl-pd;
+
+    }
+}

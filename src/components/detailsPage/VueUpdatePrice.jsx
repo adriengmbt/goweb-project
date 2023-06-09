@@ -41,23 +41,22 @@ function VueUpdatePrice() {
 
 
   return (
-    <div className="products-details__price__container">
+    <div className="vue-update-price">
 
-        <div className="products-details__price__vue-price">
+        <div className="vue-update-price__container">
 
-          <div>
-            <h3 id="price">Price </h3>
-
+          <div className="vue-update-price__header">
+            <h3 className="vue-update-price__h3" id="price">Price </h3>
           </div>
 
 
-          <div className="static-prix-and-sigle">  
+          <div className="vue-update-price__input">  
               <InputPrice onInputChange={handleInputChange} priceChange={updatePrice} />
           </div>
 
         </div>
 
-        <div className="button-and-VAT"> 
+        <div className="vue-update-price__button-and-VAT"> 
           <ButtonPrice onClick={handleUpdateProduct} disabled= {!isPriceModified} />
             <TvaPrice priceChange={updatePrice} />
         </div>

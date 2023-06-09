@@ -16,13 +16,13 @@ function TvaPrice({ priceChange }) {
     if (priceChange === 0) {
     
     return (
-    <div className="tva-update">
+    <div className="tva-price">
       <p> Price (including VAT): {product.price * 1.2} € </p>
     </div>
   );
     } else {
         return (
-            <div className="tva-update">
+            <div className="tva-price">
                 <p> Price (including VAT): {priceChange * 1.2} € </p>
             </div>
         );

@@ -1,0 +1,113 @@
+.nav-bar {
+  background-color: $main-color;
+  color: $white;
+  @include big-tablet {
+      grid-area: 1 / 1 / 2 / 2;
+      @include flex-column-center;       
+  }
+  
+  &__container {
+    display: grid;
+  }
+
+  &__header {
+    @include big-tablet {
+        display: flex;
+        justify-content: center;
+        margin-top: $xl-mg;
+        padding: $xxl-pd;
+        align-items: flex-start;
+    }
+  }
+      
+  &__header-img {
+    display: none;
+    @include big-tablet {
+        display: block;
+    }
+  }
+      
+  &__header-name {
+    display: flex;
+    font-size: $m-sz;
+    font-weight: bold;
+    text-align: left;
+    border-bottom: 0.06rem solid white;
+    align-items: center;
+    justify-content: space-around;
+
+    @include tablet {
+      justify-content: space-between;
+    }
+
+    @include big-tablet {
+      flex: initial;
+      flex-direction: column;
+      grid-area: name;
+      border-bottom: none;
+      max-width: 10rem;
+      font-size: $s-sz;
+    }
+  }
+
+  &__header-title {
+    margin: $s-pd ;
+    transition: all 0.3s ease-in-out;
+        
+    @include big-tablet {
+      margin: 0; 
+      margin-bottom: $l-mg;
+    }
+  }
+  
+  &__dashboard {     
+    @include big-tablet {
+      padding-top: $m-pd;       
+    }
+  }
+
+  &__dashboard-list {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    font-size: $xs-sz;
+    font-weight: bold;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: $s-pd 0;
+
+    @include big-tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-top: 0;
+      }
+    }
+  &__dashboard-element {
+    margin: auto;
+
+    @include big-tablet {
+      margin: 0;
+      margin-bottom: $xl-mg;
+      padding-left: $xxl-pd;
+      text-align: left;
+    }
+  }
+
+  &__menu-a {
+    text-decoration: none;
+    color: $white;
+    &:hover {
+      color: #3a3a3a;
+    }
+  }    
+}
+
+.sticky {
+  transition: all 0.3s linear;
+  background-color: $main-color;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}

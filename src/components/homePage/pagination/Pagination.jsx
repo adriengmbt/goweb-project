@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Pagination.scss"
+import '../../../styles/Main.scss';
 
 function Pagination( {totalPagesNum, currentPage, setCurrentPage} ) {
 
@@ -15,29 +15,28 @@ function Pagination( {totalPagesNum, currentPage, setCurrentPage} ) {
             setCurrentPage(currentPage + 1);
         }
     }
-
-   
+  
     return (
         <nav className="pagination">
-            <ul className="pagination__list">
-                <li className="pagination__item">
-                    <Link className="pagination__link" 
+            <ul className="pagination__list-container">
+                <li className="pagination__list-item">
+                    <Link className="pagination__list-link" 
                         onClick={prevPage} 
                         href="#"> 
                         Prev
                     </Link>
                 </li>
                 {pageNumbers.map(num => ( 
-                    <li className="pagination__item" key={num}>
-                        <Link className= {`page__item${currentPage === num ? "--active" : ""}`}
+                    <li className="pagination__list-item" key={num}>
+                        <Link className= {`pagination__list-link ${(currentPage === num )&& "pagination__list-link--active" }`}
                             onClick={() => setCurrentPage(num)}
                             href="#">
                             {num}
                         </Link>
                     </li>
                 ))}
-                <li className="pagination__item">
-                    <Link className="pagination__link"
+                <li className="pagination__list-item">
+                    <Link className="pagination__list-link"
                         onClick={nextPage}
                         href="#">
                         Next
@@ -46,8 +45,6 @@ function Pagination( {totalPagesNum, currentPage, setCurrentPage} ) {
             </ul>
         </nav>
     );
-
-
 }
 
 

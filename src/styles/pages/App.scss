@@ -1,0 +1,20 @@
+.App {
+    @include big-tablet {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "nav-bar products-management";
+    height: 100vh;
+  }
+}
+
+html {
+    background-color: #fffff0;
+    width: 100%;
+    display: grid;
+  }
+  
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+

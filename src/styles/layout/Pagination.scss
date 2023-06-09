@@ -1,0 +1,48 @@
+.pagination {
+    margin: $s-pd;
+
+    &__list-container {
+    width: 20rem;
+    border-radius: $xxxl-rad;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    padding: $xxs-pd;
+    box-shadow: 0 0 $xs-pd 0 rgba(0,0,0,0.3);
+
+    @media screen and (min-width: 768px) {  
+            padding: $xs-pd;
+        }
+    }
+              
+    &__list-item {
+        list-style: none;
+        padding-top: $xs-pd;
+        padding-bottom: $xs-pd;
+        border-radius: $xs-rad;
+        cursor: $pointer;
+        transition: all 0.3s ease-in-out;
+    }
+    &__list-link {         
+        text-decoration: none;
+        color: black;
+        padding: $xs-pd;  
+           
+        &--active {
+            background-color: $main-color;
+            border-radius: $m-rad;
+            transition: all 0.2s ease-in-out;
+            color: $white;
+            padding: $s-pd;
+            text-decoration: none;                   
+        }
+    }
+}
+
+
+
+
+
+
+
+

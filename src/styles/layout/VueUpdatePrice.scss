@@ -1,0 +1,53 @@
+.vue-update-price {
+    display: grid;
+    @include tablet {
+        padding: $xs-pd;
+        padding-top: 0;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-rows: 1fr;
+        align-items: center;
+        margin-bottom: $s-mg;
+        @include tablet {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-bottom: $l-mg;
+        }
+    }
+
+    &__header {
+        font-size: $s-sz;
+        margin: 0;
+        @include tablet {
+            margin: 0;
+            font-size: large;
+        }
+    }
+
+    &__h3 {
+        @include tablet {
+        color: $main-color;
+        margin-top: 0;
+        font-size: large;
+        }
+    }
+       
+    &__button-and-VAT {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        margin-bottom: $xs-mg;
+        
+        @include tablet {
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 1fr 1fr;    
+        }
+        @include big-tablet {
+            grid-template-rows: 1fr;    
+        }
+    }
+}   
+

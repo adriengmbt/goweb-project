@@ -1,0 +1,85 @@
+.products-management {
+    &__table-tbody {
+      margin-bottom: $xl-mg;
+      display: block;
+      box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
+      @include tablet {
+          display: table-row-group;   
+        }
+      }
+    &__table-tr { 
+      margin-bottom: $s-sz;
+      display: block;   
+      @include tablet {
+          display: table-row;
+          border-bottom: 0.15rem solid #8080800f;
+      }
+    }
+
+    &__table-td { 
+      display: block;
+      padding: $xs-sz;
+      text-align: left;
+      border-bottom: 0.06rem solid #ddd;
+      border-right: 0.06rem solid #ddd;
+      padding-left : 10rem;
+      position: relative;
+      text-align: left;
+      background-color: #fffff0;
+      margin: -0.06rem 0.6rem 0;
+      border-left: 0;
+      @include tablet {
+          display: table-cell;
+          padding: $m-pd;
+          border: 0;             
+      }
+
+      &::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 8rem;
+        background-color: $main-color;
+        color: $white;
+        display: flex;
+        align-items: center;
+        padding: $xs-pd;
+
+        @include tablet {
+          content: none;
+        }
+      }
+                    
+      &:nth-child(odd) {
+        background-color: $white;
+        @include tablet {
+        background-color : #fffff7;
+        }
+      }
+    
+      &:nth-child(even) {
+        background-color:#fffff7 ;
+        @include tablet {
+        background-color: #fffff7;
+        }
+      } 
+    }
+    
+    &__table-link {
+      text-decoration: none;
+      color: black;
+      transition: color 0.3s ease-in-out;
+          &:hover {
+        color: $main-color;
+      }
+    }
+
+    &__table-price-tva-label {
+    @include tablet {
+      display: flex;
+      justify-content: flex-end;                   
+    }
+  }
+}
